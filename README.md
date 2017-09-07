@@ -5,8 +5,7 @@ Author: Erica00
 About
 -----------------------
   HackerNews is a news website that lots of technology news are posted on this every day.<br>
-  "Hacker_news_spider" is a python script which could search all keywords related   <br>
-  news on latest 200 news and store the title and web address for you to read later.
+  "Hacker_news_spider" is a python script which could search all keywords related   <br>news on latest 200 news and store the title and web address for you to read later.
 
 Build Requirements
 -----------------------
@@ -18,7 +17,7 @@ Method of Operation
 ------------------------
 1. Connect the computer to the network
 2. Open file "Hacker_news_spider_v3.py" in any python compiler.
-3. Compile "Hacker_news_spider_v3.py". If it had been successfully compiled, the console will like this：![](http://www.baidu.com/img/bdlogo.gif) 
+3. Compile "Hacker_news_spider_v3.py". If it had been successfully compiled, the console will like this：![](https://github.com/erica00/Keyword_extraction_v3/blob/master/HN%20Spider.PNG) 
 4. Finally, check file "After_Keyword_extraction.txt", all the news titles and URLs related to the   <br>keyword are stored in this file.
 
 Insufficients
