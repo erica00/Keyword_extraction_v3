@@ -1,4 +1,4 @@
-Hacker_news_spider
+HackerNews Spider
 =======================
 Author: Erica00
 
