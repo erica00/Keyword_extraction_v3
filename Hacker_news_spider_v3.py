@@ -5,6 +5,8 @@ Created on Wed Sep 06 17:47:11 2017
 @author: gh
 
 翻页版本。查询范围：最新210条
+
+python版本：2.7
 """
 
 from bs4 import BeautifulSoup   #导入bs4库
@@ -47,16 +49,16 @@ for page in HNpages:
     soup = BeautifulSoup(response.read())
     #print soup.prettify()    #格式化输出网页所有信息
     tags = soup.find_all('a',class_='storylink',rel='nofollow')              
-    news_list = []             #http://www.itkeyword.com/doc/8874465028945577x884/python-html
+    news_list = []       
     for tag in tags:
         news_dict = {}
         news_dict['News_title'] = tag.string
         news_dict['News_url'] = tag.get('href')
-        news_list.append(news_dict)   #http://www.cnblogs.com/xixi0203/p/4523658.html
+        news_list.append(news_dict)
     
     for i in news_list:  
         if 'deep learning' in i.get('News_title') or 'Deep Learning' in i.get('News_title'):
-            file.write(str((i.get('News_title')).encode('utf-8')))    #http://www.cnblogs.com/liuyongjians/p/3598746.html
+            file.write(str((i.get('News_title')).encode('utf-8')))
             file.write('\n')
             file.write(str((i.get('News_url')).encode('utf-8')))
             file.write('\n\n') 
