@@ -34,6 +34,9 @@ HNpages = ["",
            "?next=15188996&n=121",
            "?next=15188683&n=151",
            "?next=15188426&n=181"]    #Hacker News网站前8页的部分网址
+
+keywords1 = 'Deep Learning'
+keywords2 = 'deep learning' 
 PageReqCounter = 1    #标记当前响应的页面页码
 for page in HNpages:
     request = urllib2.Request("https://news.ycombinator.com/newest"+str(page))
@@ -57,7 +60,7 @@ for page in HNpages:
         news_list.append(news_dict)
     
     for i in news_list:  
-        if 'deep learning' in i.get('News_title') or 'Deep Learning' in i.get('News_title'):
+        if keywords1 in i.get('News_title') or keywords2 in i.get('News_title'):
             file.write(str((i.get('News_title')).encode('utf-8')))
             file.write('\n')
             file.write(str((i.get('News_url')).encode('utf-8')))
